@@ -12,25 +12,40 @@
     <header class="hero">
         <h1 class="text-center text-light bg-dark">Weather Dashboard</h1>
     </header>
-    <div class="container-fluid row">
+    <main class="container-fluid row">
         <aside class="col-2">
             <h5>Search for a City:</h5>
             <input name="city" id="city-input" type="text" autofocus="true" class="form-input" />
-            <button type="submit" class="button bg-info"><i class="fas fa-search"></i></button>
+            <button id="input-btn" type="submit" class="button bg-info"><i class="fas fa-search"></i></button>
+            <div id="search-history">
+
+            </div>
         </aside>
         <div class="col-10">
-            <div class="">
+            <div class="col-6">
                 <h2 id="city">City</h2>
                 <p id="temperature"></p>
                 <p id="humidity"></p>
                 <p id="wind-speed"></p>
                 <p id="uv-index"></p>
             </div>
-            <div>
+            <div class="col-6">
                 <h2>5-Day Forecast:</h2>
+                <div id="week-forecast" class="container-fluid row">
+                    <div class="card bg-primary">
+                        <div class="card-body">
+                            <h5 id="date1">hi</h5>
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        bonjour
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
