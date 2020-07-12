@@ -42,7 +42,7 @@ function getCity(city) {
                 response.json().then(function(data) {
                     const cityLat = data.city.coord.lat;
                     const cityLon = data.city.coord.lon;
-                    cityText.innerHTML = data.city.name + ", " + data.city.country + " | " + moment().format("MM/DD/YYYY").toString() + "<img src='http://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + "@2x.png' />";
+                    cityText.innerHTML = data.city.name + ", " + data.city.country + " | " + moment().format("MM/DD/YYYY").toString() + "<img src='https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + "@2x.png' />";
                     getCityWeather(cityLat, cityLon);
                 });
             } else {
@@ -57,7 +57,7 @@ function getCity(city) {
 // using the information from the forecast api, we then call the oneCall api to give us all of our information
 function getCityWeather(cityLat, cityLon) {
     fetch(
-        "http://api.openweathermap.org/data/2.5/onecall?lat=" + cityLat + "&lon=" + cityLon + "&exclude=minutely,hourly,current&units=imperial&appid=6cc51fec452ce9ba1156eafe5282e54f"
+        "https://api.openweathermap.org/data/2.5/onecall?lat=" + cityLat + "&lon=" + cityLon + "&exclude=minutely,hourly,current&units=imperial&appid=6cc51fec452ce9ba1156eafe5282e54f"
     ).then(function(response) {
         return response.json();
     }).then(function(data) {
@@ -123,7 +123,7 @@ function displayWeather(data) {
         weekDayCardEl.appendChild(weekDateEl);
 
         const cardImg = document.createElement("img");
-        cardImg.setAttribute("src", "http://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
+        cardImg.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
         weekDayCardEl.appendChild(cardImg);
 
         const cardTemp = document.createElement("p");
