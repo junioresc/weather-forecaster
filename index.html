@@ -13,34 +13,28 @@
         <h1 class="text-center text-light bg-dark">Weather Dashboard</h1>
     </header>
     <main class="container-fluid row">
-        <aside class="col-2">
-            <h5>Search for a City:</h5>
+        <form id="search" class="col-2">
+            <p class="h5">Search for a City:</p>
             <input name="city" id="city-input" type="text" autofocus="true" class="form-input" />
             <button id="input-btn" type="submit" class="button bg-info"><i class="fas fa-search"></i></button>
+            <p class="h6 mt-2">History:</p>
             <div id="search-history">
+                
 
             </div>
-        </aside>
+        </form>
         <div class="col-10">
-            <div class="col-6">
-                <h2 id="city">City</h2>
-                <p id="temperature"></p>
-                <p id="humidity"></p>
-                <p id="wind-speed"></p>
-                <p id="uv-index"></p>
+            <div class="card p-3 w-75">
+                <h2 id="city"></h2>
+                <p>Temperature: <span id="temperature"></span></p>
+                <p>Humidity: <span id="humidity"></span></p>
+                <p>Wind Speed: <span id="wind-speed"></span></p>
+                <p id="uv-color">UV-Index: <span id="uv-index" class="mx-2"></span></p>
             </div>
-            <div class="col-6">
-                <h2>5-Day Forecast:</h2>
-                <div id="week-forecast" class="container-fluid row">
-                    <div class="card bg-primary">
-                        <div class="card-body">
-                            <h5 id="date1">hi</h5>
-
-                        </div>
-                    </div>
-                    <div class="card">
-                        bonjour
-                    </div>
+            <div>
+                <h2 class="mt-2">5-Day Forecast:</h2>
+                <div id="week-forecast" class="container-fluid row ">
+                    
                 </div>
             </div>
         </div>
